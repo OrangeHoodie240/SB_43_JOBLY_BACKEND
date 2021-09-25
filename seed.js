@@ -2,6 +2,7 @@ const db = require('./db');
 
 
 async function seedIt() {
+    await db.query('DELETE FROM companies'); 
     await db.query(`INSERT INTO companies (handle,
         name,
         num_employees,
@@ -148,7 +149,8 @@ NULL),
 '/logos/logo4.png'),
 ('weber-hernandez', 'Weber-Hernandez', 681,
 'Contain product south picture scientist.', '/logos/logo4.png')`);
-
+let rows = await db.query('SELECT * FROM companies'); 
+console.log('rows: ',rows.rows.length); 
 }
 
 seedIt();
