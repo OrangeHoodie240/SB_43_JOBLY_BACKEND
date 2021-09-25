@@ -1,7 +1,7 @@
 const db = require('./db');
 
 
-async function seedIt(){
+async function seedIt() {
     await db.query(`INSERT INTO companies (handle,
         name,
         num_employees,
@@ -147,8 +147,8 @@ NULL),
 'Enough attack return. Fall gas someone her another point those. Star public painting show concern.',
 '/logos/logo4.png'),
 ('weber-hernandez', 'Weber-Hernandez', 681,
-'Contain product south picture scientist.', '/logos/logo4.png');`);
-        console.log('here');
+'Contain product south picture scientist.', '/logos/logo4.png')`);
+
 }
 
-seedIt(); 
+seedIt();
